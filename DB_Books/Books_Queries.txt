@@ -1,0 +1,56 @@
+mysql> create database bookstoredb;
+
+mysql> create table books(BookCode int,BookName varchar(45),Category varchar(30),Author varchar(40),Publication varchar(40),Edition int,Price_Rs float);
+
+mysql> insert into books values(42353866,'Me','Autobiography','Eleanor Cooney','Goldmann',2001,244);
+mysql> insert into books values(195153448,'Life_of_Pi','Action','Mark_P_P','MorfordOxford_University_Press',1910,2097);
+mysql> insert into books values(2005018,'The_Three_Musketeers','Action','Richard_Bruce_Wright','HarperFlamingo_Canada',2001,456);
+mysql> insert into books values(60973129,'The_Call_of_the_Wild','Adventure',"Carlo_D'Este",'HarperPerennial',1991,6453);
+mysql> insert into books values(74157065,'To_Kill_a_Mockingbird','Classics','Gina_Bari_Kolata','Farrar_Straus_Giroux',1999,3553);
+mysql> insert into books values(393045218,'Little_Women','Classics','E_J_W_Barber','W_W_Norton_&amp',1999,5335);
+mysql> insert into books values(399135782,'Beloved','Classics','Amy_Tan','Putnam_Pub_Group',1991,56577);
+mysql> insert into books values(425176428,'Watchmen','Comedy','Robert_Cowley','Berkley_Publishing_Group',2000,7322);
+mysql> insert into books values(671870432,'The_Walking_Dead:_Compendium_One','Comedy','Scott_Turow','Audioworks',1993,113);
+
+mysql> insert into books(BookCode,BookName,Category,Author,Publication,Edition,Price_Rs)VALUES(679425608,'the_Fox_and_the_Horse','Comedy','David_Cordingly','Random_House',1996,444),                                                           (074322678,'The_Night_Fire','Detective_and_Mystery','Ann_Beattie','Scribner',2002,563),(71074670,'The_Adventures_of_Sherlock_Holmes','Detective_and_Mystery','David_Adams_Richards','Emblem_Editions',1988,355),(080652121,'And_Then_There_Were_None','Detective_and_Mystery','Adam_Lebor','Citadel_Press',2000,865);
+
+mysql> insert into books values(887841740,'The Water Dancer','Fantasy','Sheila Heti','House of Anansi Press',2004,7896);
+mysql> insert into books values(1552041778,'Circe','Fantasy','R. J. Kaiser','Mira Books',1999,8675);
+mysql> insert into books values(1558746218,'Ninth House','Fantasy','Jack Canfield','Health Communications',1998,577);
+insert into books values(440234743,'Carrie','Horror','John Grisham','Dell',1999,223);
+mysql> insert into books values(452264464,'The Haunting of Hill House','Horror','Toni Morrison','Plume',1994,564);
+mysql> insert into books values(61076031,'Brazen and the Beast','Romance','Mary-Kate Ashley Olsen','HarperEntertainment',2000,890);
+mysql> insert into books values(439095026,'Royal Holiday','Romance','Robynn Clairday','Scholastic',1999,999);
+mysql> insert into books values(689821166,'The Savior','Romance','Kathleen Duey','aladdin',1998,9999);
+mysql> insert into books values(32446937,'I Know Why the Caged Bird Sings','Autobiography','Richard North Patterson','Goldmann',2000,422);
+
+mysql> ALTER TABLE books ADD Review varchar(500);
+mysql> select * from books;
++------------+-----------------------------------+-----------------------+------------------------+--------------------------------+---------+----------+---------------------------------+
+| BookCode   | BookName                          | Category              | Author                 | Publication                    | Edition | Price_Rs | Review                          |
++------------+-----------------------------------+-----------------------+------------------------+--------------------------------+---------+----------+---------------------------------+
+|  195153448 | Life_of_Pi                        | Action                | Mark_P_P               | MorfordOxford_University_Press |    1910 |     5000 | NULL                            |
+|    2005018 | The_Three_Musketeers              | Action                | Richard_Bruce_Wright   | HarperFlamingo_Canada          |    2001 |     5000 | NULL                            |
+|   60973129 | The_Call_of_the_Wild              | Adventure             | Carlo_D'Este           | HarperPerennial                |    1991 |     5000 | NULL                            |
+|   74157065 | To_Kill_a_Mockingbird             | Classics              | Gina_Bari_Kolata       | Farrar_Straus_Giroux           |    1999 |     5000 | NULL                            |
+|  393045218 | Little_Women                      | Classics              | E_J_W_Barber           | W_W_Norton_&amp                |    1999 |     5000 | NULL                            |
+|  399135782 | Beloved                           | Classics              | Amy_Tan                | Putnam_Pub_Group               |    1991 |     5000 | NULL                            |
+|  425176428 | Watchmen                          | Comedy                | Robert_Cowley          | Berkley_Publishing_Group       |    2000 |     5000 | NULL                            |
+|  671870432 | The_Walking_Dead:_Compendium_One  | Comedy                | Scott_Turow            | Audioworks                     |    1993 |     5000 | NULL                            |
+|  679425608 | the_Fox_and_the_Horse             | Comedy                | Scott_Turow            | Audioworks                     |    1996 |     5000 | NULL                            |
+|   74322678 | The_Night_Fire                    | Detective_and_Mystery | Ann_Beattie            | Scribner                       |    2002 |     5000 | NULL                            |
+|   71074670 | The_Adventures_of_Sherlock_Holmes | Detective_and_Mystery | David_Adams_Richards   | Emblem_Editions                |    1988 |     5000 | NULL                            |
+|   80652121 | And_Then_There_Were_None          | Detective_and_Mystery | Adam_Lebor             | Citadel_Press                  |    2000 |     5000 | NULL                            |
+|  887841740 | The Water Dancer                  | Fantasy               | Sheila Heti            | House of Anansi Press          |    2004 |     5000 | NULL                            |
+| 1552041778 | Circe                             | Fantasy               | R. J. Kaiser           | Mira Books                     |    1999 |     5000 | NULL                            |
+| 1558746218 | Ninth House                       | Fantasy               | Jack Canfield          | Health Communications          |    1998 |     5000 | NULL                            |
+|  440234743 | Carrie                            | Horror                | John Grisham           | Dell                           |    1999 |     5000 | NULL                            |
+|  452264464 | The Haunting of Hill House        | Horror                | Toni Morrison          | Plume                          |    1994 |     5000 | NULL                            |
+|   61076031 | Brazen and the Beast              | Romance               | Mary-Kate Ashley Olsen | HarperEntertainment            |    2000 |     5000 | NULL                            |
+|  439095026 | Royal Holiday                     | Romance               | Robynn Clairday        | Scholastic                     |    1999 |     5000 | NULL                            |
+|  689821166 | The Savior                        | Romance               | Kathleen Duey          | aladdin                        |    1998 |     5000 | NULL                            |
+|   32446937 | I Know Why the Caged Bird Sings   | Autobiography         | Eleanor Cooney         | Goldmann                       |    2000 |     5000 | NULL                            |
+|   42353866 | Me                                | Autobiography         | Eleanor Cooney         | Goldmann                       |    2001 |      244 | intresting one,i just loved it. |
++------------+-----------------------------------+-----------------------+------------------------+--------------------------------+---------+----------+---------------------------------+
+22 rows in set (0.00 sec)
+
